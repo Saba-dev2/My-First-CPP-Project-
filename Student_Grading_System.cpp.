@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string> 
+using namespace std;
+
+int main() {
+    string name;
+    float marks1, marks2; 
+    float obtained, total=200.0;
+    float percentage;
+
+    cout << "Enter Your Name: ";
+    cin >> name;
+
+    cout << "Enter Your 1st Subject Marks: ";
+    cin >> marks1;
+
+    cout << "Enter Your 2nd Subject Marks: ";
+    cin >> marks2;
+
+    obtained = marks1 + marks2;
+    percentage = (obtained * 100.0) / total;
+    cout << "\n--- Result Card ---" << endl;
+    cout << "Student Name: " << name << endl;
+    cout << "Total Obtained Marks: " << obtained << " out of " << total << endl;
+    cout << "Your Percentage Is: " << percentage << "%" << endl;
+
+    if (percentage >= 90) {
+        cout << name << ", Your grade is A+. Your performance is Excellent!" << endl;
+    } else if (percentage >= 80) {
+        cout << name << ", Your Grade is A. Your Performance is Brilliant!" << endl;
+    } else if (percentage >= 70) {
+        cout << name << ", Your Grade is B. Your Performance is Good." << endl;
+    } else if (percentage >= 60) {
+        cout << name << ", Your Grade is C. Your Performance need some Attention." << endl;
+    } else if(percentage>=50){
+    cout<< name << ", Your Grade is D. Your Performance is poor you need more attention." <<endl;
+        }else {
+        cout << name << ", You're Fail. Your Performance is bad. You need immediate action." << endl;
+    }
+
+    return 0;
+}
